@@ -9,9 +9,6 @@ fi
 [[ -r /etc/profile ]]                   && source /etc/profile
 [[ -r /etc/bash/bashrc ]]               && source /etc/bash/bashrc
 
-[[ -r ~/.keychain/${HOSTNAME}-sh ]]     && source ~/.keychain/${HOSTNAME}-sh
-[[ -r ~/.keychain/${HOSTNAME}-sh-gpg ]] && source ~/.keychain/${HOSTNAME}-sh-gpg
-
 # clear screen once
 clear
 
