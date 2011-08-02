@@ -6,8 +6,8 @@ if [[ $- != *i* ]] ; then
     return
 fi
 
-[[ -r /etc/profile ]]     && source /etc/profile
-[[ -r /etc/bash/bashrc ]] && source /etc/bash/bashrc
+[[ -r /etc/profile ]]     && source /etc/profile     || true
+[[ -r /etc/bash/bashrc ]] && source /etc/bash/bashrc || true
 
 # clear screen once
 clear
@@ -40,7 +40,7 @@ export HISTSIZE=1024
 # LANG <S>
 # This variable determines the locale category for any category not specifically
 # selected via a variable starting with `LC_'.
-export LANG=en_US.UTF-8
+export LANG=en_US.utf8
 
 # LC_ALL <S>
 # This variable overrides the value of the `LANG' variable and the value of any
@@ -50,28 +50,28 @@ unset LC_ALL
 # LC_COLLATE <S>
 # This variable determines the locale category for character collation
 # information within ranges in glob brackets and for sorting.
-export LC_COLLATE=en_US.UTF-8
+export LC_COLLATE=en_US.utf8
 
 # LC_CTYPE <S>
 # This variable determines the locale category for character handling functions.
-export LC_CTYPE=en_US.UTF-8
+export LC_CTYPE=en_US.utf8
 
 # LC_MESSAGES <S>
 # This variable determines the language in which messages should be written.
 # Note that zsh does not use message catalogs.
-export LC_MESSAGES=en_US.UTF-8
+export LC_MESSAGES=en_US.utf8
 
 # LC_NUMERIC <S>
 # This variable affects the decimal point character and thousands separator
 # character for the formatted input/output functions and string conversion
 # functions. Note that zsh ignores this setting when parsing floating point
 # mathematical expressions.
-export LC_NUMERIC=de_DE.UTF-8
+export LC_NUMERIC=de_DE.utf8
 
 # LC_TIME <S>
 # This variable determines the locale category for date and time formatting in
 # prompt escape sequences.
-export LC_TIME=de_DE.UTF-8
+export LC_TIME=de_DE.utf8
 
 # LINES <S>
 # The number of lines for this terminal session. Used for printing select lists
@@ -201,11 +201,12 @@ ulimit -s 8192
 # denied) to the users specified.
 umask 077
 
-cd
+# {{{ change to HOME directory
+cd #}}}
 
 # load none ZSH components and/or configurations for all shells
-for sh in .shell/*.sh; do
-    [[ -r ${sh} ]] && source ${sh}
+for sh in ~/.shell/*.sh; do
+    [[ -r "${sh}" ]] && source "${sh}" || true
 done
 
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
