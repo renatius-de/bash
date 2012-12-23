@@ -6,7 +6,6 @@ if [[ $- != *i* ]] ; then
     return
 fi
 
-[[ -r /etc/profile ]]     && source /etc/profile     || true
 [[ -r /etc/bash/bashrc ]] && source /etc/bash/bashrc || true
 
 # clear screen once
