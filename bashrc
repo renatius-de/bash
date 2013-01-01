@@ -96,6 +96,11 @@ unset MAILCHECK
 # every subdirectory of the element.
 unset MAILPATH
 
+# PS1
+# The value of this parameter is expanded (see PROMPTING below) and used as the
+# primary prompt string. The default value is ``\s-\v\$ ''.
+export PS1="\[\033[1;34m\]\u \[\033[1;33m\](\h) \[\033[1;30m\][\D{%Y-%m-%d %H:%M}]\[\033[0;37m\] Jobs: \[\033[1;37m\]\j\n\[\033[1;35m\]\$\[\033[0;37m\]:> "
+
 # TMOUT
 # If this parameter is nonzero, the shell will receive an ALRM signal if a
 # command is not entered within the specified number of seconds after issuing a
@@ -201,13 +206,12 @@ ulimit -s 8192
 umask 077
 
 # {{{ change to HOME directory
-cd #}}}
+cd
+#}}}
 
 # load none ZSH components and/or configurations for all shells
 for sh in ~/.shell/*.sh; do
     [[ -r "${sh}" ]] && source "${sh}" || true
 done
-
-export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 
 # vim:filetype=sh textwidth=80
