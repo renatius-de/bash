@@ -214,10 +214,6 @@ ulimit -s 8192
 # denied) to the users specified.
 umask 077
 
-# {{{ change to HOME directory
-cd
-#}}}
-
 # load none ZSH components and/or configurations for all shells
 for sh in ~/.shell/*.sh; do
     [[ -r "${sh}" ]] && source "${sh}" || true
