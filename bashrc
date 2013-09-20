@@ -215,7 +215,7 @@ ulimit -s 8192
 umask 077
 
 # load none ZSH components and/or configurations for all shells
-for sh in ~/.shell/*.sh; do
+for sh in ~/.shell/*.sh ~/.dotfiles/bash/LiquidPrompt/liquidprompt; do
     [[ -r "${sh}" ]] && source "${sh}" || true
 done
 
