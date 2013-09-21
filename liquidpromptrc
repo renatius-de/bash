@@ -1,4 +1,3 @@
-
 ####################################
 # LIQUID PROMPT CONFIGURATION FILE #
 ####################################
@@ -125,6 +124,9 @@ LP_ENABLE_SCREEN_TITLE=1
 
 # Use differents colors for differents hosts you SSH in
 LP_ENABLE_SSH_COLORS=1
+
+# Add newline after prompt
+LP_PS1_POSTFIX="\n> "
 
 # Specify a list of complete and colon (":") separated paths in which, all vcs
 # will be disabled
