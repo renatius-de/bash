@@ -103,13 +103,6 @@ unset MAILPATH
 # ellipsis.
 export PROMPT_DIRTRIM=3
 
-# PS1
-# The value of this parameter is expanded (see PROMPTING below) and used as the
-# primary prompt string. The default value is ``\s-\v\$ ''.
-PS1="\[\033[1;34m\]\u \[\033[1;33m\](\h) \[\033[1;36m\]\w \[\033[1;30m\][\D{%Y-%m-%d %H:%M}]\[\033[0;37m\] Jobs: \[\033[1;37m\]\j\n\[\033[1;35m\]\$\[\033[0;37m\]:> "
-[[ -n ${SSH_CLIENT} ]] && PS1="\[\033[41m\]REMOTE\033[0m ${PS1}"
-export PS1
-
 # TMOUT
 # If this parameter is nonzero, the shell will receive an ALRM signal if a
 # command is not entered within the specified number of seconds after issuing a
