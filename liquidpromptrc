@@ -1,16 +1,6 @@
-####################################
-# LIQUID PROMPT CONFIGURATION FILE #
-####################################
-
-# If you want to use different themes and features,
-# you can load the corresponding files here:
-#source ~/code/liquidprompt/nojhan.theme
-#LP_PS1_FILE="~/code/liquidprompt/nojhan.ps1"
-
-#############
-# BEHAVIOUR #
-#############
-
+########################################################################
+# BEHAVIOUR
+########################################################################
 # Maximal value under which the battery level is displayed
 # Recommended value is 75
 LP_BATTERY_THRESHOLD=75
@@ -25,11 +15,11 @@ LP_TEMP_THRESHOLD=60
 
 # The maximum percentage of the screen width used to display the path
 # Recommended value is 35
-LP_PATH_LENGTH=35
+LP_PATH_LENGTH=75
 
 # How many directories to keep at the beginning of a shortened path
 # Recommended value is 2
-LP_PATH_KEEP=2
+LP_PATH_KEEP=1
 
 # Do you want to display the hostname, even if not connected through network?
 # Defaults to 0 (do not display hostname when localy connected)
@@ -38,13 +28,13 @@ LP_HOSTNAME_ALWAYS=1
 
 # Do you want to display the user, even if he is the same than the logged one?
 # Defaults to 1 (always display the user)
-# set to 0 if you want to hide the logged user (it will always display different users)
+# set to 0 if you want to hide the logged user
 LP_USER_ALWAYS=1
 
 # Do you want to display the percentages of load/batteries along with their
 # corresponding marks? Set to 0 to only print the colored marks.
 # Defaults to 1 (display percentages)
-LP_PERCENTS_ALWAYS=1
+LP_PERCENTS_ALWAYS=0
 
 # Do you want to use the permissions feature ?
 # Recommended value is 1
@@ -56,7 +46,7 @@ LP_ENABLE_SHORTEN_PATH=1
 
 # Do you want to use the proxy detection feature ?
 # Recommended value is 1
-LP_ENABLE_PROXY=1
+LP_ENABLE_PROXY=0
 
 # Do you want to use the jobs feature ?
 # Recommended value is 1
@@ -64,7 +54,7 @@ LP_ENABLE_JOBS=1
 
 # Do you want to use the load feature ?
 # Recommended value is 1
-LP_ENABLE_LOAD=1
+LP_ENABLE_LOAD=0
 
 # Do you want to use the batt feature ?
 # Recommended value is 1
@@ -84,15 +74,15 @@ LP_ENABLE_SVN=1
 
 # Do you want to use the mercurial special features ?
 # Recommended value is 1
-LP_ENABLE_HG=1
+LP_ENABLE_HG=0
 
 # Do you want to use the fossil special features ?
 # Recommended value is 1
-LP_ENABLE_FOSSIL=1
+LP_ENABLE_FOSSIL=0
 
 # Do you want to use the bzr special features ?
 # Recommanded value is 1
-LP_ENABLE_BZR=1
+LP_ENABLE_BZR=0
 
 # Show time of the last prompt display
 # Recommended value is 0
@@ -103,7 +93,7 @@ LP_ENABLE_TIME=1
 LP_ENABLE_VIRTUALENV=1
 
 # Show average system temperature
-LP_ENABLE_TEMP=1
+LP_ENABLE_TEMP=0
 
 # When showing time, use an analog clock instead of numeric values.
 # The analog clock is "accurate" to the nearest half hour.
@@ -132,4 +122,4 @@ LP_PS1_POSTFIX="\n> "
 # will be disabled
 LP_DISABLED_VCS_PATH=""
 
-# vim: set et sts=4 sw=4 tw=120 ft=sh:
+# vim: set tw=80 ft=sh
