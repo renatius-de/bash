@@ -1,3 +1,4 @@
 [submodule "LiquidPrompt"]
 	path = LiquidPrompt
 	url = git://github.com/nojhan/liquidprompt.git
+	branch = master
