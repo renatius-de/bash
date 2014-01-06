@@ -6,8 +6,6 @@ if [[ $- != *i* ]] ; then
     return
 fi
 
-[[ -r /etc/bash/bashrc ]] && source /etc/bash/bashrc || true
-
 # clear screen once
 clear
 
