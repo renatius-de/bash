@@ -6,6 +6,9 @@ if [[ $- != *i* ]] ; then
     return
 fi
 
+# load files from /etc/profile.d
+source ~/.shell/load-profile
+
 # clear screen once
 clear
 
