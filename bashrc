@@ -40,7 +40,7 @@ export HISTSIZE=1024
 # LANG <S>
 # This variable determines the locale category for any category not specifically
 # selected via a variable starting with `LC_'.
-export LANG=en_US.UTF-8
+export LANG=en_US
 
 # LC_ALL <S>
 # This variable overrides the value of the `LANG' variable and the value of any
