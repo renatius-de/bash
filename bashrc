@@ -9,9 +9,6 @@ fi
 # load files from /etc/profile.d
 source ~/.shell/load-profile
 
-# clear screen once
-clear
-
 # cdpath <S> <Z> (CDPATH <S>)
 # An array (colon-separated list) of directories specifying the search path for
 # the cd command.
