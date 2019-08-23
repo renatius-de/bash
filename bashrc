@@ -8,5 +8,6 @@ umask 0077
 for sh in ~/.shell/*.sh; do
     [[ -r "${sh}" ]] && source "${sh}" || true
 done
+unset sh
 
 # vim:filetype=sh textwidth=80
